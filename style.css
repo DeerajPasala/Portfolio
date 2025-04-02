@@ -291,6 +291,10 @@ article.active {
   border-radius: inherit;
   z-index: -1;
 }
+.client-logo{
+  width: 90%;
+  max-width: 100%;
+}
 
 
 
@@ -334,6 +338,7 @@ main {
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
+
 }
 
 .info-content .name {
@@ -731,7 +736,7 @@ main {
 .clients-list {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   gap: 15px;
   margin: 0 -15px;
   padding: 25px;
@@ -746,12 +751,15 @@ main {
 .clients-item {
   min-width: 50%;
   scroll-snap-align: start;
+  margin-right: 8%;
 }
 
 .clients-item img {
-  width: 100%;
-  filter: grayscale(1);
-  transition: var(--transition-1);
+  width: 150%;
+  max-width: 150%;
+  /* filter: #fff; */
+  /* transition: var(--transition-1); */
+ 
 }
 
 .clients-item img:hover { filter: grayscale(0); }
@@ -1224,7 +1232,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
@@ -1339,7 +1346,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .avatar-box { border-radius: 30px; }
 
-  .avatar-box img { width: 120px; }
+  .avatar-box img { 
+    width: 120px; 
+    border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  }
 
   .info-content .name { margin-bottom: 15px; }
 
@@ -1427,7 +1438,10 @@ textarea.form-input::-webkit-resizer { display: none; }
     border-radius: 20px;
   }
 
-  .testimonials-avatar-box img { width: 80px; }
+  .testimonials-avatar-box img {
+     width: 80px; 
+     border-radius: 20px;
+    }
 
   .testimonials-item-title {
     margin-bottom: 10px;
@@ -1542,7 +1556,18 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 
-
+@media (max-width: 768px){
+  .clients-item{
+    margin-right: 30%;
+  }
+  .testimonials-avatar-box img{
+    border-radius: 15px !important;
+  }
+  .avatar-box img{
+    border-radius: 15px;
+  }
+  
+}
 
 
 /**
@@ -1570,7 +1595,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 30px 15px;
   }
 
-
+ 
 
   /**
    * NAVBAR
